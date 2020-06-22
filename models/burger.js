@@ -1,3 +1,3 @@
-// require orm
+const orm = require('../config/orm');
 
-module.exports
+module.exports 
