@@ -4,15 +4,15 @@ const router = require("express").Router();
 
 const burger = require("../models/burger");
 
-// get to get the data to disply
+// get the data, then render the data to the index handlebars
 router.get("/", (req, res) => {
-    console.log("this is from the controller")
   burger.view().then((data) => {
     const handlebarObject = {
         burgers: data
     };
     console.log(handlebarObject, "this is the handlebar object");
     res.render("index", handlebarObject)
+    // ***** still need to have something either here or on handlebar that will list the burgers in separate lists if devoured is true...
 });
   
 });

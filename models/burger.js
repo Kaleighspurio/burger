@@ -1,10 +1,11 @@
 const orm = require("../config/orm");
 
 const burger = {
+    // make the query using the orm, then get the results
   view: () => {
     return new Promise((resolve, reject) => {
+        // use orm to query, pass in "burgers" as the table name
       orm.selectAll("burgers").then((result) => {
-        // console.log(result, "burgerData");
         resolve(result);
       });
     });
