@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+}
+
+.burger-div {
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+
+button {
+    margin: 5px;
+}
