@@ -1,5 +1,16 @@
-{{!-- submit button and layout --}}
+
 <h1>Eat A Burger!</h1>
 
-<img src="../public/assets/img/burger-pic.png">
+<img class="burger-pic" src="./assets/img/burger-pic.png" height="200px">
 
+<ul>
+    {{#each burgers}}
+    <li>{{burger_name}}</li>
+    {{/each}}
+</ul>
+
+
+<form>
+    <input id="burger-input" type="text" name="new-burger">
+    <button type="submit">Submit</button>
+</form>
