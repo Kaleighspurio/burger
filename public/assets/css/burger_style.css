@@ -1,13 +1,49 @@
 body {
     text-align: center;
+    background-color: #272727;
+    font-family: fantasy;
+}
+
+.yellowstuff {
+    color: #FFE400;
+}
+
+input, label {
+    display:block;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .burger-div {
     text-align: center;
-    width: 40%;
-    margin: auto;
+    width: 80%;
+    margin: auto;  
 }
 
 button {
     margin: 5px;
+    background-color: #14A76C;
+    border: 1px #272727 solid;
+    border-radius: 5px;
+}
+
+.devoured-burgers {
+    color: #747474;
+    font-style: italic;
+    float: right;
+    width: 45%;
+}
+
+.not-devoured-burgers {
+    color: #FF652F;
+    font-weight: bolder;
+    float: left;
+    width: 50%
+}
+
+form {
+    clear: both;
 }

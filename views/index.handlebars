@@ -1,29 +1,30 @@
-
-<h1>Eat A Burger!</h1>
+<h1 class='yellowstuff'>Eat A Burger!</h1>
 
 <img class="burger-pic" src="./assets/img/burger-pic.png" height="200px">
 
 <div class="burger-div">
+  <div class="not-devoured-burgers">
   <h3>Burgers to devour</h3>
   <ul>
     {{#each this.notDevoured}}
-    <li>{{burger_name}}  <button class="devour-button" data-id="{{id}}">Devour it</button></li>
+    <li>{{burger_name}} <button class="devour-button" data-id="{{id}}">Devour it</button></li>
     {{/each}}
-</ul>  
+  </ul>
 </div>
 
-<div class="burger-div">
+<div class="devoured-burgers">
   <h3>Devoured Burgers</h3>
   <ul>
     {{#each this.devoured}}
     <li>{{burger_name}}</li>
     {{/each}}
-</ul>  
+  </ul>
+</div>
 </div>
 
 
-
-<form>
+  <form>
+    <label class="yellowstuff" for="burgers">Enter more burgers to devour</label>
     <input id="burger-input" type="text" name="burgers">
     <button class="submit-button" type="submit">Submit</button>
-</form>
+  </form>
