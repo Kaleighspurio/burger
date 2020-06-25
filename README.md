@@ -12,7 +12,7 @@ The following packages were installed and utilized:
 * express-handlebars
 
 ## Installation
-After pulling from the repository, run `npm install` in your terminal command line to install all of the dependencies.  Use the schema.sql to set up the database, and then rune the application through your terminal with `node server.js`.
+After pulling from the repository, run `npm install` in your terminal command line to install all of the dependencies.  Use the schema.sql to set up the database, and then run the application through your terminal with `node server.js`.
 
 ## Demos
 This application is deployed on heroku. Try it out [HERE](https://protected-springs-53094.herokuapp.com/)!
