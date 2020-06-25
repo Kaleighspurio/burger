@@ -6,7 +6,7 @@
 <div class="burger-div">
   <ul>
     {{#each burgers}}
-    <li>{{burger_name}}  <button data-id={{id}}>Devour it</button></li>
+    <li>{{burger_name}}  <button class= "devour-button" data-id={{id}}>Devour it</button></li>
     {{/each}}
 </ul>  
 </div>
@@ -14,6 +14,6 @@
 
 
 <form>
-    <input id="burger-input" type="text" name="new-burger">
-    <button type="submit">Submit</button>
+    <input id="burger-input" type="text" name="burgers">
+    <button class="submit-button" type="submit">Submit</button>
 </form>

@@ -10,9 +10,11 @@ const burger = {
       });
     });
   },
-  create: () => {
+  create: (name) => {
       return new Promise((resolve, reject) => {
-          orm.insertOne("burgers", "burger_name", name).then();
+          orm.insertOne("burgers", "burger_name", name).then((result) => {
+            resolve(result);
+          });
       });
     
   },

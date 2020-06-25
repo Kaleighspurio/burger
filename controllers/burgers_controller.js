@@ -12,13 +12,20 @@ router.get("/", (req, res) => {
     };
     console.log(handlebarObject, "this is the handlebar object");
     res.render("index", handlebarObject)
-    // ***** still need to have something either here or on handlebar that will list the burgers in separate lists if devoured is true...
+    // TODO still need to have something either here or on handlebar that will list the burgers in separate lists if devoured is true...
 });
   
 });
 
 // post to add more burgers
-router.post("/api/burgers", (req, res) => {});
+router.post("/api/burgers", (req, res) => {
+  const newBurger = req.body.name;
+  console.log(newBurger);
+  burger.create(newBurger).then(() => {
+    console.log("Burger added succesfully");
+    res.json(newBurger);
+  });
+});
 
 // update to change the devoured to true
 router.put("/api/burgers/:id", (req, res) => {});
