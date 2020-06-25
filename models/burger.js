@@ -18,8 +18,12 @@ const burger = {
       });
     
   },
-  update: () => {
-    orm.updateOne("burgers", id, "devoured", true).then();
+  update: (id) => {
+    orm.updateOne("burgers", "devoured", true, id).then(
+      (result) => {
+        resolve(result);
+      }
+    );
   },
 };
 module.exports = burger;

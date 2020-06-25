@@ -34,7 +34,7 @@ const orm = {
 //   query the database to change one of the values in an existing row
   updateOne: (table, id, colToChange, value) => {
     return new Promise((resolve, reject) => {
-      const queryString = "UPDATE ?? WHERE id=? SET ??=?";
+      const queryString = "UPDATE ?? SET ??=? WHERE id=?";
       connection.query(
         queryString,
         [table, id, colToChange, value],
