@@ -5,7 +5,7 @@ body {
 }
 
 .yellowstuff {
-    color: #FFE400;
+    color: #FBC832;
 }
 
 input, label {
@@ -25,7 +25,7 @@ ul {
 
 button {
     margin: 5px;
-    background-color: #14A76C;
+    background-color: #95BF15;
     border: 1px #272727 solid;
     border-radius: 5px;
 }
@@ -38,7 +38,7 @@ button {
 }
 
 .not-devoured-burgers {
-    color: #FF652F;
+    color: #FD2B0E;
     font-weight: bolder;
     float: left;
     width: 50%
