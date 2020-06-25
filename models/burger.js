@@ -19,11 +19,13 @@ const burger = {
     
   },
   update: (id) => {
-    orm.updateOne("burgers", "devoured", true, id).then(
+    return new Promise((resolve, reject) => {
+     orm.updateOne("burgers", "devoured", true, id).then(
       (result) => {
         resolve(result);
       }
-    );
+    );     
+    })
   },
 };
 module.exports = burger;

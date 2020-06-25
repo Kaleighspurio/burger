@@ -31,8 +31,10 @@ router.post("/api/burgers", (req, res) => {
 // update to change the devoured to true
 router.put("/api/burgers/:id", (req, res) => {
   const id = req.params.id;
-  console.log(id);
-  burger.update(id);
+  burger.update(id).then(() => {
+    console.log("Burger successfully devoured");
+    res.json(id);
+  });
 });
 
 module.exports = router;
