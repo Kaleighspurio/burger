@@ -9,7 +9,7 @@ app.use(express.static("public"));
 // middleware that is needed to use POST data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+// this is needed to use handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
