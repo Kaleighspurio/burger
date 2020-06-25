@@ -7,20 +7,21 @@ const burger = require("../models/burger");
 // get the data, then render the data to the index handlebars
 router.get("/", (req, res) => {
   burger.view().then((data) => {
+    // separate the burgers by whether they are devoured or not
+    let devoured = data.filter((burger) => burger.devoured == true);
+    let notDevoured = data.filter((burger) => burger.devoured == false);
+    // put them in an object for the handlebars
     const handlebarObject = {
-        burgers: data
+      devoured: devoured,
+      notDevoured: notDevoured,
     };
-    console.log(handlebarObject, "this is the handlebar object");
-    res.render("index", handlebarObject)
-    // TODO still need to have something either here or on handlebar that will list the burgers in separate lists if devoured is true...
-});
-  
+    res.render("index", handlebarObject);
+  });
 });
 
 // post to add more burgers
 router.post("/api/burgers", (req, res) => {
   const newBurger = req.body.name;
-  console.log(newBurger);
   burger.create(newBurger).then(() => {
     console.log("Burger added succesfully");
     res.json(newBurger);
@@ -28,6 +29,8 @@ router.post("/api/burgers", (req, res) => {
 });
 
 // update to change the devoured to true
-router.put("/api/burgers/:id", (req, res) => {});
+router.put("/api/burgers/:id", (req, res) => {
+  const id = req.params.id;
+});
 
 module.exports = router;

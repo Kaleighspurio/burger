@@ -4,9 +4,19 @@
 <img class="burger-pic" src="./assets/img/burger-pic.png" height="200px">
 
 <div class="burger-div">
+  <h3>Burgers to devour</h3>
   <ul>
-    {{#each burgers}}
-    <li>{{burger_name}}  <button class= "devour-button" data-id={{id}}>Devour it</button></li>
+    {{#each this.notDevoured}}
+    <li>{{burger_name}}  <button class= "devour-button" data-id="{{id}}">Devour it</button></li>
+    {{/each}}
+</ul>  
+</div>
+
+<div class="burger-div">
+  <h3>Devoured Burgers</h3>
+  <ul>
+    {{#each this.devoured}}
+    <li>{{burger_name}}</li>
     {{/each}}
 </ul>  
 </div>
