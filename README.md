@@ -4,7 +4,7 @@
 This application is a full-stack application that lists burgers that can be "devoured".  When the user clicks the "Devour it" button, the burger is then moved over onto the Devoured Burger list.  The user may input new burgers in the form, which will then update the "Burgers to Devour" list.  The burger information is all rendered through server-side rendering using express handlebars.
 
 ## Technologies
-This application is a full-stack application using Javascript, Node.js, mySQL, jQuery, Express, Express handlebars, HTML, and CSS.
+This application is a full-stack application using Javascript, Node.js, mySQL, jQuery, Express, Express handlebars, HTML, and CSS.  SQL queries are handled with a custom ORM.
 The following packages were installed and utilized:
 * dotenv
 * mysql
